@@ -16,6 +16,7 @@
     />
   </head>
   <body>
+    <!--Sidebar -->
     <div class="sidebar">
       <!--Seção do menu nav -->
       <nav class="sidebar__navigation">
@@ -45,17 +46,18 @@
       <!--Seção da biblioteca -->
       <div class="sidebar__library">
         <div class="library__header">
-          <button class="header__button">
+          <button class="library__button">
             <span class="fa fas fa-book"></span>
             <span>Sua Biblioteca</span>
           </button>
-          <span class="fa fa-plus header__button"></span>
+          <span class="fa fa-plus library__button"></span>
         </div>
-        <div class="playlist__container">
+
+        <section class="playlist__container">
           <div class="box__container">
             <span class="box__title">Crie sua primeira playlist</span>
             <span class="box__subtitle">É fácil, vamos te ajudar.</span>
-            <button class="playlist__button">
+            <button class="white__button">
               <span>Criar playlist</span>
             </button>
           </div>
@@ -64,11 +66,11 @@
             <span class="box__subtitle"
               >Avisaremos você sobre novos episódios.</span
             >
-            <button class="playlist__button">
+            <button class="white__button">
               <span>Explore podcasts</span>
             </button>
           </div>
-        </div>
+        </section>
       </div>
 
       <!--Seção de links -->
@@ -85,12 +87,70 @@
       </div>
 
       <!--Seção do seletor de linguagem -->
-      <div class="sidebar__language__selector">
+      <div class="sidebar-language__selector">
         <button class="languages__button">
           <span class="fa fa-globe"></span>
           <span>Português do Brasil</span>
         </button>
       </div>
     </div>
+
+    <!--Principal -->
+    <main>
+      <div class="main__container">
+        <nav class="header__navigator">
+          <div class="navigator">
+            <span class="fa fa-chevron-left"></span>
+            <span class="fa fa-chevron-right"></span>
+          </div>
+          <div class="header__right-menu">
+            <div class="header__menu">
+              <ul>
+                <li>
+                  <a class="header__button" href="">
+                    <span>Premium</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="header__button" href="">
+                    <span>Suporte</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="header__button" href="">
+                    <span>Baixar</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="header__login">
+              <a class="header__button" href="">
+                <span>Inscrever-se</span>
+              </a>
+              <button class="white__button lg__button">
+                <span>Entrar</span>
+              </button>
+            </div>
+          </div>
+        </nav>
+        <section class="playlists"></section>
+        <section class="main__footer"></section>
+        <div class="copyright">© 2024 leoguain</div>
+      </div>
+    </main>
+
+    <!--Footer -->
+    <footer>
+      <div class="text__box">
+        <span class="text__title">Testar o Premium de graça</span>
+        <span class="text__subtitle">
+          Inscreva-se para curtir música ilimitada e podcasts só com alguns
+          anúncios. Não precisa de cartão de crédito.
+        </span>
+      </div>
+      <button class="white__button lg__button">
+        <span>Inscreva-se grátis</span>
+      </button>
+    </footer>
   </body>
 </html>

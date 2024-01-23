@@ -1,21 +1,24 @@
+:root {
+  --main-color: #121212;
+  --secondary-color: #242424;
+  --text-color: #b3b3b3;
+}
+
 body {
   background-color: #000;
-  color: #fff;
+  color: var(--text-color);
   font-family: "DM Sans", sans-serif;
+  letter-spacing: 1.2;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--text-color);
   height: 30px;
 }
 
@@ -24,14 +27,13 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
   padding: 0.75rem;
   width: 300px;
 }
 
 /*NAVBAR PROPS -----------------------------------------------------------*/
 .sidebar__navigation {
-  background-color: #121212;
+  background-color: var(--main-color);
   border-radius: 8px;
   padding: 1rem 0 0 1rem;
 }
@@ -56,7 +58,10 @@ body {
 }
 
 .sidebar nav ul li a {
-  color: #b3b3b3;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--text-color);
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 600;
@@ -69,7 +74,7 @@ body {
 /*BIBLIOTECA PROPS -----------------------------------------------------------*/
 .sidebar__library {
   margin-top: 0.5rem;
-  background-color: #121212;
+  background-color: var(--main-color);
   border-radius: 8px 8px 0 0;
   padding: 1rem;
 }
@@ -81,16 +86,18 @@ body {
   padding: 1rem;
 }
 
-.header__button {
+.library__button {
+  display: flex;
+  gap: 0.75rem;
   background-color: transparent;
   border: none;
-  color: #b3b3b3;
+  color: var(--text-color);
   cursor: pointer;
   font-size: 0.875rem;
   font-weight: 600;
 }
 
-.header__button:hover {
+.library__button:hover {
   color: #fff;
 }
 
@@ -117,7 +124,7 @@ body {
 
 /*BOXES PROPS -------------------------------------------------------*/
 .box__container {
-  background-color: #242424;
+  background-color: var(--secondary-color);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -136,30 +143,14 @@ body {
   font-weight: 400;
 }
 
-.box__container button {
-  background-color: #fff;
-  border: none;
-  border-radius: 25px;
-  color: #121212;
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  width: fit-content;
-  transition: 0.4s;
-}
-
-.box__container button:hover {
-  transform: scale(1.05);
-}
-
 /*LINKS E SELETOR DE IDIOMAS PROPS ----------------------------------------------*/
 .sidebar__links,
-.sidebar__language__selector {
-  background-color: #121212;
+.sidebar-language__selector {
+  background-color: var(--main-color);
   padding: 1rem 3rem 2rem 2.25rem;
 }
 
-.sidebar__language__selector {
+.sidebar-language__selector {
   border-radius: 0 0 8px 8px;
 }
 
@@ -170,7 +161,7 @@ body {
 }
 
 .sidebar__links a {
-  color: #b3b3b3;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -186,9 +177,9 @@ body {
   text-decoration: underline;
 }
 
-.sidebar__language__selector button {
+.sidebar-language__selector button {
   background-color: transparent;
-  border: 1px solid #b3b3b3;
+  border: 1px solid var(--text-color);
   border-radius: 25px;
   color: #fff;
   cursor: pointer;
@@ -198,7 +189,162 @@ body {
   transition: 0.4s;
 }
 
-.sidebar__language__selector button:hover {
+.sidebar-language__selector button:hover {
   border: 1px solid #fff;
+  transform: scale(1.05);
+}
+
+/*CONTAINER PRINCIPAL PROPS --------------------------------------------------------------*/
+main {
+  position: fixed;
+  top: 0;
+  left: 310px;
+  right: 0;
+  padding: 0.75rem;
+}
+
+.main__container {
+  background: linear-gradient(var(--secondary-color), var(--main-color) 100%);
+  border-radius: 8px;
+  height: 545px;
+  overflow: auto;
+  position: relative;
+  width: inherit;
+}
+.main__container::-webkit-scrollbar-thumb {
+  visibility: hidden;
+}
+.main__container:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.header__navigator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 322px;
+  right: 1.5rem;
+  background-color: rgba(18, 18, 18, 0.7);
+  border-radius: 8px 8px 0 0;
+  padding: 0 1rem;
+  margin: 0.75rem 0;
+}
+
+.navigator {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navigator span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #060606;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+}
+
+.header__right-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.header__menu {
+  padding: 0.25rem 2rem;
+  border-right: 1px solid #fff;
+}
+
+.header__menu ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.header__login {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 0 0 2rem;
+}
+
+.header__button {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.header__button:hover {
+  color: #fff;
+  font-weight: bold;
+}
+
+.playlists {
+  background-color: transparent;
+  height: 1200px;
+}
+
+.copyright {
+  border-top: 2px solid var(--secondary-color);
+  margin: 0 2rem;
+  padding: 3rem 0;
+}
+
+/*FOOTER PROPS --------------------------------------------------------------*/
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #af2896, #509bf5);
+  padding: 0.5rem 1.5rem 0.5rem 1rem;
+  margin: 0.5rem;
+}
+
+.text__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.text__title {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.text__subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/*--- ITENS GENÉRICOS ---*/
+.white__button {
+  background-color: #fff;
+  border: none;
+  border-radius: 25px;
+  color: var(--main-color);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  transition: 0.4s;
+}
+
+.lg__button {
+  padding: 1rem 2rem;
+}
+
+.white__button:hover {
   transform: scale(1.05);
 }
