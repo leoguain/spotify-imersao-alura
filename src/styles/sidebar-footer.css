@@ -1,13 +1,7 @@
-:root {
-  --main-color: #121212;
-  --secondary-color: #242424;
-  --text-color: #b3b3b3;
-}
-
 body {
-  background-color: #000;
+  background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--font-dm-sans);
   letter-spacing: 1.2;
 }
 
@@ -169,11 +163,11 @@ body {
   font-size: 0.66rem;
 }
 
-.main__link {
+.cookies__link {
   font-size: 0.75rem;
 }
 
-.main__link:hover {
+.cookies__link:hover {
   text-decoration: underline;
 }
 
@@ -192,106 +186,6 @@ body {
 .sidebar-language__selector button:hover {
   border: 1px solid #fff;
   transform: scale(1.05);
-}
-
-/*CONTAINER PRINCIPAL PROPS --------------------------------------------------------------*/
-main {
-  position: fixed;
-  top: 0;
-  left: 310px;
-  right: 0;
-  padding: 0.75rem;
-}
-
-.main__container {
-  background: linear-gradient(var(--secondary-color), var(--main-color) 100%);
-  border-radius: 8px;
-  height: 545px;
-  overflow: auto;
-  position: relative;
-  width: inherit;
-}
-.main__container::-webkit-scrollbar-thumb {
-  visibility: hidden;
-}
-.main__container:hover::-webkit-scrollbar-thumb {
-  visibility: visible;
-}
-
-.header__navigator {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 322px;
-  right: 1.5rem;
-  background-color: rgba(18, 18, 18, 0.7);
-  border-radius: 8px 8px 0 0;
-  padding: 0 1rem;
-  margin: 0.75rem 0;
-}
-
-.navigator {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.navigator span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #060606;
-  border-radius: 50%;
-  cursor: pointer;
-  height: 2rem;
-  width: 2rem;
-}
-
-.header__right-menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 0;
-}
-
-.header__menu {
-  padding: 0.25rem 2rem;
-  border-right: 1px solid #fff;
-}
-
-.header__menu ul {
-  display: flex;
-  gap: 1rem;
-}
-
-.header__login {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 0 0 0 2rem;
-}
-
-.header__button {
-  color: var(--text-color);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.header__button:hover {
-  color: #fff;
-  font-weight: bold;
-}
-
-.playlists {
-  background-color: transparent;
-  height: 1200px;
-}
-
-.copyright {
-  border-top: 2px solid var(--secondary-color);
-  margin: 0 2rem;
-  padding: 3rem 0;
 }
 
 /*FOOTER PROPS --------------------------------------------------------------*/
