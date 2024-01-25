@@ -2,10 +2,8 @@ const searchInput = document.getElementById("search-input");
 const resultArtists = document.getElementById("result-artists");
 const resultPlaylists = document.getElementById("result-playlists");
 
-function loadPlaylists(searchTerm) {
-  const urlApi = searchTerm
-    ? `http://localhost:3000/playlists?genre_like${searchTerm}`
-    : `http://localhost:3000/playlists`;
+function loadPlaylists() {
+  const urlApi = `http://localhost:3000/playlists`;
 
   fetch(urlApi)
     .then((response) => response.json())
@@ -50,7 +48,7 @@ function displayPlaylists(results) {
 }
 
 function requestApi(searchTerm) {
-  fetch(`http://localhost:3000/artists`)
+  fetch(`http://localhost:3000/artists?name_like=${searchTerm}`)
     .then((response) => response.json())
     .then((results) => displayArtists(results));
 }
@@ -95,7 +93,6 @@ document.addEventListener("input", function () {
   }
 
   requestApi(searchTerm);
-  loadPlaylists(searchTerm);
 });
 
 loadPlaylists();
