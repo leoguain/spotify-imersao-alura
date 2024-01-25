@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./src/styles/vars.css" />
     <link rel="stylesheet" href="./src/styles/sidebar-footer.css" />
     <link rel="stylesheet" href="./src/styles/main-content.css" />
+    <link rel="stylesheet" href="./src/styles/media-queries.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
@@ -161,14 +162,16 @@
           </div>
         </nav>
 
-        <section class="playlists">
+        <div class="playlists">
           <div class="playlists__header">
             <a class="main__link" href="">
               <h1>Playlists do Spotify</h1>
             </a>
             <a class="default__link" href="">Mostrar tudo</a>
           </div>
-        </section>
+          <section id="result-artists" class="playlist__items"></section>
+          <section id="result-playlists" class="playlist__items"></section>
+        </div>
         <section class="main__footer"></section>
         <div class="copyright">© 2024 leoguain</div>
       </div>
@@ -187,5 +190,7 @@
         <span>Inscreva-se grátis</span>
       </button>
     </footer>
+
+    <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>
