@@ -120,7 +120,7 @@ main {
   height: 1200px;
 }
 
-.playlists__header {
+.main__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -149,6 +149,26 @@ main {
   text-decoration: underline;
 }
 
+.data__not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 6rem 0;
+  color: #fff;
+}
+
+.data__not-found .error__title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.data__not-found .error__description {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .playlist__items {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -167,10 +187,11 @@ main {
   padding: 0.875rem;
   cursor: pointer;
   transition: 0.4s;
+  background: linear-gradient(transparent, #181818);
 }
 
 .playlist__card:hover {
-  background-color: var(--secondary-color);
+  background-color: #363636;
 }
 
 .playlist__card:hover .fa-play {
@@ -222,6 +243,72 @@ main {
 
 .hidden {
   display: none;
+}
+
+.no__data {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.main__footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.internal__links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.column__title {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.column__links ul {
+  margin: 1rem 0;
+}
+
+.column__links ul li {
+  margin: 0.75rem 0;
+}
+
+.column__links ul li a {
+  color: var(--text-color);
+
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.column__links ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.external__links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.external__links span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.external__links span:hover {
+  background-color: #838383;
 }
 
 .copyright {

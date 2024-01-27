@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="./src/styles/sidebar-footer.css" />
     <link rel="stylesheet" href="./src/styles/main-content.css" />
     <link rel="stylesheet" href="./src/styles/media-queries.css" />
+
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
@@ -104,6 +104,7 @@
     <!--Principal -->
     <main>
       <div class="main__container">
+        <!--HEADER DO MAIN -->
         <nav class="header__navigator">
           <div class="navigator">
             <button class="navigator__button">
@@ -162,17 +163,77 @@
           </div>
         </nav>
 
+        <!--SETOR DE PLAYLISTS DO MAIN -->
         <div class="playlists">
-          <div class="playlists__header">
-            <a class="main__link" href="">
-              <h1>Playlists do Spotify</h1>
-            </a>
-            <a class="default__link" href="">Mostrar tudo</a>
+          <!--SEÇÃO DE ARTISTAS -->
+          <div id="artists-container" class="hidden">
+            <div id="artists-header" class="main__header">
+              <a class="main__link" href="/"> Artistas </a>
+            </div>
+            <div id="artists-not-found" class="data__not-found">
+              <span id="error-title-artist" class="error__title"></span>
+              <span class="error__description">
+                Confira se você digitou corretamente ou use menos palavras‑chave
+                ou palavras‑chave diferentes.
+              </span>
+            </div>
+            <section id="result-artists" class="playlist__items"></section>
           </div>
-          <section id="result-artists" class="playlist__items"></section>
-          <section id="result-playlists" class="playlist__items"></section>
+
+          <!--SEÇÃO DE PLAYLISTS -->
+          <div id="playlists-container" class="">
+            <div id="playlists-header" class="main__header">
+              <a class="main__link" href="/">Playlists do Spotify</a>
+              <a class="default__link" href="/">Mostrar tudo</a>
+            </div>
+            <div id="playlists-not-found" class="data__not-found hidden">
+              <span id="error-title-playlist" class="error__title"></span>
+              <span class="error__description">
+                Confira se você digitou corretamente ou use menos palavras‑chave
+                ou palavras‑chave diferentes.
+              </span>
+            </div>
+            <section id="result-playlists" class="playlist__items"></section>
+          </div>
         </div>
-        <section class="main__footer"></section>
+
+        <!--RODAPÉ DO MAIN -->
+        <section class="main__footer">
+          <div class="internal__links">
+            <div class="column__links">
+              <span class="column__title">Empresa</span>
+              <ul>
+                <li><a href="/">Sobre</a></li>
+                <li><a href="/">Empregos</a></li>
+                <li><a href="/">For the Record</a></li>
+              </ul>
+            </div>
+
+            <div class="column__links">
+              <span class="column__title">Comunidades</span>
+              <ul>
+                <li><a href="/">Para Artistas</a></li>
+                <li><a href="/">Desenvolvedores</a></li>
+                <li><a href="/">Publicidade</a></li>
+                <li><a href="/">Investidores</a></li>
+                <li><a href="/">Fornecedores</a></li>
+              </ul>
+            </div>
+
+            <div class="column__links">
+              <span class="column__title">Links úteis</span>
+              <ul>
+                <li><a href="/">Suporte</a></li>
+                <li><a href="/">Aplicativo móvel grátis</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="external__links">
+            <span class="fab fa-instagram"></span>
+            <span class="fab fa-twitter"></span>
+            <span class="fab fa-facebook"></span>
+          </div>
+        </section>
         <div class="copyright">© 2024 leoguain</div>
       </div>
     </main>
